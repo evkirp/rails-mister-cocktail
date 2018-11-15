@@ -16,13 +16,16 @@ class CocktailsController < ApplicationController
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      render 'new'
     end
   end
 
-  private
+  def ingredients
+    @cocktail = Cocktail.find(params[:id])
+    @ingredients = @cocktail.ingredients
+  end
 
-  def cocktail_params
+  private def cocktail_params
     params.require(:cocktail).permit(:name)
   end
 end
