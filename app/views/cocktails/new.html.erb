@@ -1,0 +1,11 @@
+<div class="container">
+  <%= link_to "Back to all cocktails", cocktails_path %>
+
+  <h1>New cocktail</h1>
+
+  <%= form_for(@cocktail) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+  <% end %>
+</div>
