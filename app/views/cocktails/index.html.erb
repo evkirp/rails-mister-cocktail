@@ -1,5 +1,10 @@
 <div class="container">
+  <p>
+    <%= link_to "Create New Cocktail", cocktails_new_path %>
+  </p>
   <h1>Available Cocktails</h1>
+  <%= cl_image_tag("cocktails_thinkstockphotos-530433362",
+      width: 400, height: 300, crop: :fill) %>
 
   <div class="cocktails">
     <% @cocktails.each do |cocktail| %>
