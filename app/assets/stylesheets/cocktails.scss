@@ -1,3 +1,13 @@
 // Place all the styles related to the Cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cocktails {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+}
+
+.cocktail--preview {
+  padding: 12px;
+  border: 1px solid #ddd;
+}

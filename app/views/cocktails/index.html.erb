@@ -1,1 +1,12 @@
-<h1>Hello, Rails!</h1>
+<div class="container">
+  <h1>Available Cocktails</h1>
+
+  <div class="cocktails">
+    <% @cocktails.each do |cocktail| %>
+      <div class="cocktail--preview">
+        <p><%= cocktail.name %></p>
+        <%= link_to "More details", cocktail_path(cocktail) %>
+      </div>
+    <% end %>
+  </div>
+</div>
